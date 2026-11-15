@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="800" viewBox="0 0 640 800" role="img" aria-labelledby="title desc">
+  <title id="title">人物肖像占位 · 非真实人物</title><desc id="desc">蓝色光影中的匿名人物轮廓，等待替换为经授权公开的赞助者照片。</desc>
+  <defs>
+    <linearGradient id="back" x2="1" y2="1"><stop stop-color="#17254c"/><stop offset=".5" stop-color="#0e2140"/><stop offset="1" stop-color="#081426"/></linearGradient>
+    <radialGradient id="halo"><stop stop-color="#4361d7" stop-opacity=".48"/><stop offset="1" stop-color="#2563eb" stop-opacity="0"/></radialGradient>
+    <linearGradient id="face" x1="0" x2="1" y1=".2" y2=".8"><stop stop-color="#5082ae"/><stop offset=".4" stop-color="#244467"/><stop offset="1" stop-color="#101e35"/></linearGradient>
+    <linearGradient id="body" x1="0" x2="1"><stop stop-color="#264f74"/><stop offset=".45" stop-color="#172b48"/><stop offset="1" stop-color="#0a162a"/></linearGradient>
+    <linearGradient id="edge" x1="0" x2="1"><stop stop-color="#38bdf8"/><stop offset="1" stop-color="#8b5cf6" stop-opacity=".12"/></linearGradient>
+    <linearGradient id="fade" y1="0" y2="1" x2="0"><stop stop-color="#081426" stop-opacity="0"/><stop offset="1" stop-color="#081426"/></linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0v40" fill="none" stroke="#8bbcff" stroke-opacity=".065"/></pattern>
+  </defs>
+  <path fill="url(#back)" d="M0 0h640v800H0z"/><path fill="url(#grid)" d="M0 0h640v800H0z"/><ellipse cx="320" cy="300" rx="350" ry="380" fill="url(#halo)"/>
+  <g fill="none" stroke="#6ca6e9" stroke-opacity=".18"><circle cx="320" cy="320" r="231"/><circle cx="320" cy="320" r="252" stroke-dasharray="2 12"/><path d="M42 320h78m400 0h78M320 42v35m0 490v35"/></g>
+  <path d="M164 147a232 232 0 0 1 324 22" fill="none" stroke="#38bdf8" stroke-width="2" stroke-opacity=".65"/>
+  <path d="M116 800v-90c0-120 18-184 105-217l49-23 3-75h94l4 75 48 23c87 33 106 97 106 217v90Z" fill="url(#body)"/>
+  <path d="m273 398-3 72 50 48 51-48-4-72" fill="url(#face)"/>
+  <path d="M226 281c-10-71 17-127 93-129 78-2 105 54 95 129l-11 75c-6 39-45 78-83 78s-78-39-84-78Z" fill="url(#face)"/>
+  <path d="M225 298c-9-27-14-62-7-91 7-38 39-68 96-70 60-2 98 25 109 66 8 28 3 66-10 93l-8-58c-23-7-42-18-56-38-27 30-73 43-116 41Z" fill="#0d1c32"/>
+  <path d="M225 289c-24-18-23 29-10 48l20 8m179-56c24-18 23 29 10 48l-20 8" fill="url(#face)"/>
+  <path d="m265 474-47 20 33 131 69-107 68 107 33-131-47-20-54 44Z" fill="#172b47" stroke="#4c7199" stroke-opacity=".4"/>
+  <path d="m320 518-22 52 8 132 14 39 14-39 8-132Z" fill="#07182b"/>
+  <path d="M116 727c0-134 23-201 105-233l44-20m-30-129-9-64c-10-62 10-104 48-122" fill="none" stroke="url(#edge)" stroke-width="2"/>
+  <g stroke="#86b9e7" stroke-opacity=".35" fill="none"><path d="M42 62V42h20m516 0h20v20M42 690v20h20m516 0h20v-20"/><path d="M47 395h18l22 22h36m394-222h34l22-22h20"/><circle cx="123" cy="417" r="4"/><circle cx="517" cy="195" r="4"/></g>
+  <path fill="url(#fade)" d="M0 580h640v220H0z"/>
+  <rect x="204" y="691" width="232" height="42" rx="21" fill="#10213a" stroke="#7297c4" stroke-opacity=".35"/>
+  <text x="320" y="718" fill="#d1e5f8" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="17" text-anchor="middle" letter-spacing="3">人物肖像占位</text>
+  <text x="320" y="758" fill="#9eb4cf" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="13" text-anchor="middle" letter-spacing="2">非真实人物 · 请替换授权照片</text>
+</svg>

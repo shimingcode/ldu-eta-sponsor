@@ -1,0 +1,330 @@
+.intro-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 50% 40%, #182b59 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 80%, #271449 0%, transparent 55%),
+    linear-gradient(140deg, #081426, #0b1533 65%, #171035);
+  color: #f2f7ff;
+  padding: 72px 24px 56px;
+  isolation: isolate;
+}
+.intro-grid {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.12;
+  background-image:
+    linear-gradient(#5477a4 1px, transparent 1px),
+    linear-gradient(90deg, #5477a4 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse at center, transparent 15%, #000 80%);
+}
+.intro-circuits {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  color: #38bdf8;
+  opacity: 0.19;
+}
+.intro-circuit-signal {
+  stroke: #a2e8ff;
+  stroke-width: 3;
+  stroke-dasharray: 70 700;
+  animation: intro-circuit-flow 7s linear infinite;
+}
+.intro-particles {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+.intro-particles span {
+  position: absolute;
+  left: var(--particle-x);
+  top: var(--particle-y);
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #8bdcff;
+  box-shadow: 0 0 12px #38bdf8;
+  animation: intro-particle-drift var(--particle-duration) ease-in-out
+    var(--particle-delay) infinite alternate;
+  opacity: 0.45;
+}
+.intro-topline {
+  position: absolute;
+  top: 32px;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: #a6bdd6;
+}
+.intro-topline > span {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #38bdf8;
+  box-shadow: 0 0 10px #38bdf8;
+}
+.intro-content {
+  width: min(100%, 680px);
+  text-align: center;
+}
+.intro-emblem-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 186px;
+  height: 186px;
+  margin: 0 auto 38px;
+}
+.intro-emblem {
+  width: 112px;
+  height: 112px;
+  filter: drop-shadow(0 0 24px #2563eb44);
+}
+.intro-orbit {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+.intro-orbit-outer {
+  inset: 0;
+  border: 1px solid #81b5ff24;
+  border-top-color: #38bdf8a0;
+  border-right-color: #38bdf84a;
+  animation: intro-orbit-turn 22s linear infinite;
+}
+.intro-orbit-outer::after {
+  content: '';
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  width: 6px;
+  height: 6px;
+  background: #b4e7ff;
+  border-radius: 50%;
+  box-shadow: 0 0 16px #38bdf8;
+}
+.intro-orbit-inner {
+  inset: 12px;
+  border: 1px dashed #98b4e040;
+  animation: intro-orbit-turn 34s linear infinite reverse;
+}
+.intro-emblem-label {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #101d39;
+  border: 1px solid #506b944d;
+  border-radius: 20px;
+  padding: 3px 10px;
+  color: #b5c4dc;
+  font-size: 9px;
+  white-space: nowrap;
+  letter-spacing: 1px;
+}
+.intro-eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 12px;
+  letter-spacing: 4px;
+  color: #7dd3fc;
+  margin: 0 0 18px;
+}
+.intro-content h1 {
+  font-size: clamp(27px, 4.5vw, 46px);
+  line-height: 1.5;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  margin: 0;
+  color: #f1f6ff;
+}
+.intro-content h1 span {
+  display: block;
+}
+.intro-subtitle {
+  font-size: 10px;
+  line-height: 1.8;
+  color: #b2c0d9;
+  letter-spacing: 1.4px;
+  margin: 15px 0 0;
+}
+.intro-welcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  line-height: 1.8;
+  color: #c6d4eb;
+  margin: 30px 0 38px;
+}
+.intro-welcome svg {
+  flex-shrink: 0;
+  color: #94b9fc;
+}
+.intro-loading {
+  width: min(100%, 320px);
+  margin: auto;
+}
+.intro-countdown-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #b3c4dd;
+  letter-spacing: 1px;
+  margin-bottom: 13px;
+}
+.intro-countdown {
+  display: flex;
+  gap: 5px;
+  align-items: baseline;
+}
+.intro-countdown strong {
+  font-family: ui-monospace, monospace;
+  font-size: 22px;
+  line-height: 1;
+  color: #c9eaff;
+  font-weight: 400;
+  font-variant-numeric: tabular-nums;
+}
+.intro-progress {
+  height: 3px;
+  background: #b0caff22;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.intro-progress > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform-origin: left;
+  background: linear-gradient(90deg, #2563eb, #7c3aed, #38bdf8);
+  box-shadow: 0 0 12px #38bdf8;
+}
+.intro-countdown-status {
+  margin: 13px 0 0;
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: #a0b3cc;
+}
+.intro-footer {
+  position: absolute;
+  bottom: 23px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: #95a9c4;
+  margin: 0;
+}
+@keyframes intro-orbit-turn {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes intro-circuit-flow {
+  to {
+    stroke-dashoffset: -1540;
+  }
+}
+@keyframes intro-particle-drift {
+  from {
+    transform: translate3d(0, 10px, 0);
+    opacity: 0.2;
+  }
+  to {
+    transform: translate3d(12px, -20px, 0);
+    opacity: 0.75;
+  }
+}
+@media (max-height: 760px) {
+  .intro-emblem-wrap {
+    width: 145px;
+    height: 145px;
+    margin-bottom: 25px;
+  }
+  .intro-emblem {
+    width: 90px;
+    height: 90px;
+  }
+  .intro-content h1 {
+    font-size: clamp(25px, 4vw, 36px);
+  }
+  .intro-welcome {
+    margin: 20px 0 23px;
+  }
+  .intro-topline {
+    top: 22px;
+  }
+}
+@media (max-height: 570px) {
+  .intro-screen {
+    padding: 35px 20px;
+  }
+  .intro-topline,
+  .intro-footer {
+    display: none;
+  }
+  .intro-emblem-wrap {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 18px;
+  }
+  .intro-emblem {
+    width: 62px;
+    height: 62px;
+  }
+  .intro-content h1 {
+    font-size: 23px;
+    line-height: 1.4;
+  }
+  .intro-content h1 span {
+    display: inline;
+    margin-left: 8px;
+  }
+  .intro-eyebrow {
+    margin-bottom: 10px;
+  }
+  .intro-welcome {
+    margin: 15px 0;
+  }
+  .intro-subtitle {
+    margin-top: 8px;
+  }
+  .intro-emblem-label {
+    font-size: 8px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .intro-particles,
+  .intro-circuit-signal {
+    display: none;
+  }
+  .intro-orbit {
+    animation: none;
+  }
+  .intro-progress > span {
+    box-shadow: none;
+  }
+}

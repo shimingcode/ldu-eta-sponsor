@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600" role="img" aria-labelledby="title">
+ <title id="title">机器人项目活动示意 · 非真实记录</title>
+ <defs><linearGradient id="b" x2="1" y2="1"><stop stop-color="#182446"/><stop offset="1" stop-color="#081426"/></linearGradient><linearGradient id="m" x2="1" y2="1"><stop stop-color="#7c9bb7"/><stop offset=".5" stop-color="#34516c"/><stop offset="1" stop-color="#192e48"/></linearGradient><linearGradient id="a" x2="1" y2="1"><stop stop-color="#42c6ee"/><stop offset="1" stop-color="#5d68d7"/></linearGradient><pattern id="g" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0v40" fill="none" stroke="#6a91e8" stroke-opacity=".08"/></pattern></defs>
+ <path fill="url(#b)" d="M0 0h960v600H0z"/><path fill="url(#g)" d="M0 0h960v600H0z"/>
+ <g stroke="#5a86bc" stroke-opacity=".26" fill="none"><path d="M90 440h780M136 86h688v360H136z"/><circle cx="500" cy="264" r="189" stroke-dasharray="4 10"/><path d="M500 50v50m0 350v50M286 264h50m330 0h50"/></g>
+ <ellipse cx="480" cy="475" rx="242" ry="25" fill="#030d1b" fill-opacity=".7"/>
+ <path d="M392 415h180l37 46H355Z" fill="url(#m)" stroke="#88acd0" stroke-opacity=".5"/><rect x="428" y="322" width="108" height="106" rx="12" fill="url(#m)" stroke="#80a7c6" stroke-opacity=".6"/>
+ <path d="m455 342-86-119 54-38 86 119Z" fill="url(#m)" stroke="#8eaecd" stroke-opacity=".65"/><circle cx="482" cy="328" r="39" fill="#172d46" stroke="#779fc0" stroke-width="3"/><circle cx="482" cy="328" r="18" fill="url(#a)"/>
+ <path d="m390 192 166-76 26 55-166 76Z" fill="url(#m)" stroke="#8eaecd" stroke-opacity=".65"/><circle cx="399" cy="217" r="41" fill="#172d46" stroke="#779fc0" stroke-width="3"/><circle cx="399" cy="217" r="19" fill="url(#a)"/>
+ <circle cx="564" cy="142" r="33" fill="#172d46" stroke="#779fc0" stroke-width="3"/><circle cx="564" cy="142" r="14" fill="url(#a)"/>
+ <path d="m582 165 45 36-15 20-45-36Z" fill="#668cab"/><path d="m625 209 34 6 18 40-18 8-15-28-23-4m-10-9-13 34 16 38 18-9-11-27 9-22" fill="#9ab8cd"/>
+ <g stroke="#38bdf8" stroke-width="2" stroke-opacity=".65" fill="none"><path d="M258 154h-49v59m528 155h43v-59M209 292v29h40M733 112h47v38"/><path d="M453 398h57"/></g>
+ <g fill="#65b6df" opacity=".65"><circle cx="209" cy="213" r="4"/><circle cx="780" cy="309" r="4"/><circle cx="249" cy="321" r="4"/><circle cx="733" cy="112" r="4"/></g>
+ <rect x="30" y="532" width="244" height="37" rx="18.5" fill="#0a182b" stroke="#6aa2c4" stroke-opacity=".4"/><text x="152" y="556" fill="#c1d6e9" font-size="16" text-anchor="middle" font-family="'Microsoft YaHei',sans-serif">活动示意 · 非真实记录</text>
+</svg>

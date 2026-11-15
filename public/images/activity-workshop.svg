@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600" role="img" aria-labelledby="title">
+ <title id="title">电路工作坊活动示意 · 非真实记录</title>
+ <defs><linearGradient id="b" x2="1" y2="1"><stop stop-color="#112c48"/><stop offset="1" stop-color="#081426"/></linearGradient><linearGradient id="pcb" x2="1" y2="1"><stop stop-color="#1a5863"/><stop offset="1" stop-color="#11333c"/></linearGradient><pattern id="g" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0v40" fill="none" stroke="#38bdf8" stroke-opacity=".07"/></pattern></defs>
+ <path fill="url(#b)" d="M0 0h960v600H0z"/><path fill="url(#g)" d="M0 0h960v600H0z"/>
+ <ellipse cx="472" cy="480" rx="330" ry="39" fill="#020b18" fill-opacity=".6"/>
+ <g transform="translate(150 108) rotate(-10 320 180)"><rect x="0" y="0" width="650" height="360" rx="22" fill="url(#pcb)" stroke="#4aaab3" stroke-opacity=".5" stroke-width="2"/>
+ <g fill="none" stroke="#61a8a1" stroke-width="3" stroke-opacity=".65"><path d="M44 50h120l55 55h100m-275-25h100l50 55h110M42 295h146l38-38h82M606 43H478l-49 62H352m255 198H480l-52-46h-85M50 182h181m149 0h226M319 40v59m0 157v65M390 42v44l-30 35M240 320v-30l40-40"/></g>
+ <g fill="#193346" stroke="#749ba0" stroke-width="2"><rect x="242" y="108" width="156" height="148" rx="8"/><rect x="260" y="126" width="120" height="112" rx="5" fill="#0b1d2a"/></g>
+ <g stroke="#8abfc0" stroke-width="5"><path d="M254 94v14m18-14v14m18-14v14m18-14v14m18-14v14m18-14v14m18-14v14m18-14v14M254 256v14m18-14v14m18-14v14m18-14v14m18-14v14m18-14v14m18-14v14m18-14v14M228 122h14m-14 20h14m-14 20h14m-14 20h14m-14 20h14m-14 20h14m-14 20h14M398 122h14m-14 20h14m-14 20h14m-14 20h14m-14 20h14m-14 20h14m-14 20h14"/></g>
+ <text x="320" y="181" text-anchor="middle" fill="#87c2c8" font-family="monospace" font-size="24">ETA</text><text x="320" y="204" text-anchor="middle" fill="#5a969d" font-family="monospace" font-size="10">CREATE · CONNECT</text>
+ <g fill="#13354b" stroke="#78b3bb" stroke-width="2"><rect x="71" y="125" width="68" height="38" rx="5"/><rect x="489" y="220" width="68" height="38" rx="5"/><circle cx="520" cy="112" r="28"/><circle cx="164" cy="247" r="23"/></g><g fill="#65c9d6"><circle cx="42" cy="42" r="6"/><circle cx="608" cy="42" r="6"/><circle cx="42" cy="318" r="6"/><circle cx="608" cy="318" r="6"/></g></g>
+ <rect x="30" y="532" width="244" height="37" rx="18.5" fill="#0a182b" stroke="#6aa2c4" stroke-opacity=".4"/><text x="152" y="556" fill="#c1d6e9" font-size="16" text-anchor="middle" font-family="'Microsoft YaHei',sans-serif">活动示意 · 非真实记录</text>
+</svg>

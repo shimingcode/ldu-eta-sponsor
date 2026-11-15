@@ -1,0 +1,42 @@
+# Dependencies and generated output
+node_modules/
+dist/
+dist-ssr/
+coverage/
+playwright-report/
+test-results/
+*.tsbuildinfo
+work/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+*.local
+.npmrc
+.netrc
+.git-credentials
+credentials.json
+secrets/
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+
+# Logs
+logs/
+*.log
+
+# Editors and operating systems
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
