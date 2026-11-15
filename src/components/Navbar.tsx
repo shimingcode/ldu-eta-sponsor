@@ -1,3 +1,4 @@
+import { association } from '../data/sponsor'
 import { useEffect, useRef, useState } from 'react'
 import { ArrowUpRight, Menu, X } from 'lucide-react'
 import { assetUrl } from '../data/assets'
@@ -39,8 +40,8 @@ export function Navbar() {
           onClick={() => setOpen(false)}
         >
           <img
-            src={assetUrl('images/association-placeholder.svg')}
-            alt="协会徽标占位"
+            src={assetUrl(association.logo)}
+            alt={association.name + '徽标'}
             width="42"
             height="42"
           />

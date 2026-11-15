@@ -1,3 +1,4 @@
+import { association } from '../data/sponsor'
 import { ArrowUp, Heart } from 'lucide-react'
 import type { Sponsor } from '../data/sponsor'
 import { Reveal } from './Reveal'
@@ -14,6 +15,10 @@ export function ThanksSection({ sponsor }: { sponsor: Sponsor }) {
           {sponsor.message ||
             '感谢每一份对青年探索与创新的关注。协会感谢寄语待补充。'}
         </p>
+        <div className="association-story">
+          <h3>{association.motto}</h3>
+          <p>{association.introduction}</p>
+        </div>
         <div className="thanks-signature">
           <span />
           <p>鲁东大学电子科技协会</p>

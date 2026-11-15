@@ -1,3 +1,4 @@
+import { association } from '../data/sponsor'
 import type { CSSProperties } from 'react'
 import { motion, useReducedMotion } from 'motion/react'
 import { Heart, Sparkles } from 'lucide-react'
@@ -84,12 +85,12 @@ export function IntroScreen({ onComplete }: IntroScreenProps) {
           <div className="intro-orbit intro-orbit-inner" aria-hidden="true" />
           <img
             className="intro-emblem"
-            src={`${import.meta.env.BASE_URL}images/association-placeholder.svg`}
-            alt="电子科技协会徽标占位图"
+            src={`${import.meta.env.BASE_URL}${association.logo}`}
+            alt={association.name + '徽标'}
             width="120"
             height="120"
           />
-          <span className="intro-emblem-label">徽标占位图</span>
+          <span className="intro-emblem-label">始于 1985</span>
         </div>
         <p className="intro-eyebrow">
           <Sparkles size={15} aria-hidden="true" /> 赞助者专属空间

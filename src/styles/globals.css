@@ -1200,3 +1200,42 @@
     transform: none;
   }
 }
+
+.portrait-image {
+  height: 430px;
+  object-position: center 30%;
+}
+.association-story {
+  max-width: 760px;
+  margin: 38px auto 0;
+  padding-top: 28px;
+  border-top: 1px solid #8ebcfa24;
+}
+.association-story h3 {
+  font-size: 17px;
+  color: #9bdcff;
+}
+.association-story p {
+  margin-top: 16px;
+  color: #b6c1d9;
+  line-height: 2;
+  font-size: 13px;
+  text-align: left;
+}
+.contact-notice {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #a7b6ce;
+}
+.timeline-grid:has(> li:only-child),
+.honor-grid:has(> article:only-child) {
+  grid-template-columns: minmax(0, 1fr);
+}
+.activity-grid:has(> div:only-child) {
+  grid-template-columns: minmax(0, 760px);
+}
+@media (max-width: 640px) {
+  .portrait-image {
+    height: 350px;
+  }
+}

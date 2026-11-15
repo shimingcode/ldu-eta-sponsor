@@ -5,7 +5,7 @@ async function enter(page: Page) {
   await page.goto('./')
   await expect(page.getByTestId('intro-screen')).toBeVisible()
   await expect(
-    page.getByRole('heading', { name: '赞助者姓名', exact: true }),
+    page.getByRole('heading', { name: '任逸轩', exact: true }),
   ).toBeVisible({ timeout: 8_000 })
   await expect(page.getByTestId('intro-screen')).toHaveCount(0)
 }
@@ -138,7 +138,7 @@ test('reduced motion, intro and page accessibility', async ({ page }) => {
     .analyze()
   expect(introAudit.violations).toEqual([])
   await expect(
-    page.getByRole('heading', { name: '赞助者姓名', exact: true }),
+    page.getByRole('heading', { name: '任逸轩', exact: true }),
   ).toBeVisible({ timeout: 8_000 })
   await expect(page.getByTestId('intro-screen')).toHaveCount(0)
   expect(

@@ -42,63 +42,56 @@ export interface Sponsor {
   /** Keep true until all examples have been replaced with verified data. */
   isPlaceholder?: boolean
 }
-/** 示例档案，不代表任何真实人物、荣誉或已发生的赞助。 */
+export const association = {
+  name: '鲁东大学电子科技协会',
+  logo: 'images/association-logo.svg',
+  founded: '1985年3月5日',
+  motto: '学以致用，真诚服务；科技创新，引领时代',
+  introduction:
+    '鲁东大学电子科技协会成立于1985年3月5日，是由电子爱好者自发组建的非营利性学生团体，隶属于能源动力与电气工程学院。协会是集学习、钻研、实践、创新为一体的社团，下设主席团、技术联盟、秘书处、策划部、后勤部、调度部等部门。拥有四十年的深厚积淀，是鲁东大学历史最悠久的社团之一，也是能源动力与电气工程学院的特色社团，运作模式成熟，技术传承稳定。',
+}
+export const site = {
+  title: '任逸轩 · 鲁东大学电子科技协会赞助者专属空间',
+  description:
+    '食品工程学院任逸轩，热爱科学，喜欢自动铅。感谢以个人名义赞助100元，支持鲁东大学电子科技协会。',
+  url: 'https://shimingcode.github.io/ldu-eta-sponsor/',
+  contactNotice: '尊重赞助者个人意愿，联系方式不公开。',
+}
 export const sponsor: Sponsor = {
-  name: '赞助者姓名',
-  nickname: '与热爱同行的人',
-  avatar: 'images/avatar-placeholder.svg',
+  name: '任逸轩',
+  nickname: '热爱科学，喜欢自动铅',
+  avatar: 'images/ren-yixuan.png',
   cover: 'images/cover-placeholder.svg',
-  title: '鲁东大学电子科技协会 · 赞助者专属空间',
-  biography: [
-    '这里将记录一位支持电子科技探索的同行者：他的故事、与协会相遇的契机，以及对青年创新的期待。',
-    '正式个人介绍将在获得本人授权后呈现。现在看到的是网站展示样稿，期待用真实的故事填满这一页。',
-  ],
+  title: '食品工程学院 · 电子科技协会有效赞助者',
+  biography: ['来自食品工程学院，热爱科学，喜欢自动铅。'],
   sponsorSince: '',
   contributions: [
     {
-      id: 'first-meeting',
-      date: '时间待补充',
-      title: '从一次相遇开始',
-      description:
-        '此处用于记录首次支持的背景与初心。具体日期及赞助事实待核实后填写。',
-      category: '相遇 · 示例',
-    },
-    {
-      id: 'support',
-      date: '时间待补充',
-      title: '让想法走向实践',
-      description:
-        '此处用于记录经确认的设备、物资或活动支持，不预设金额与成果。',
-      category: '支持 · 示例',
-    },
-    {
-      id: 'together',
-      date: '时间待补充',
-      title: '把热爱继续传递',
-      description:
-        '此处用于记录后续交流与共同成长的故事。当前不代表已发生的活动。',
-      category: '同行 · 示例',
+      id: 'personal-support',
+      date: '日期待补充',
+      title: '以个人名义赞助100元',
+      description: '任逸轩以个人名义向鲁东大学电子科技协会赞助100元。',
+      category: '个人赞助',
     },
   ],
-  honors: [],
+  honors: [
+    {
+      id: 'effective-sponsor',
+      title: '电子科技协会有效赞助者',
+      issuer: association.name,
+      description: '授予日期及证书图片待补充。',
+    },
+  ],
   activities: [
     {
-      id: 'workshop',
-      title: '电子实践 · 从原理到电路',
-      description: '活动展示位，等待经授权的真实照片与活动记录。',
-      image: 'images/activity-workshop.svg',
-      imageAlt: '电子电路插画，活动示意而非真实记录',
-    },
-    {
-      id: 'project',
-      title: '创意协作 · 让灵感发生',
-      description: '活动展示位，等待经授权的真实照片与活动记录。',
-      image: 'images/activity-project.svg',
-      imageAlt: '科技项目插画，活动示意而非真实记录',
+      id: 'view-achievements',
+      title: '观看协会成果',
+      description: '活动日期与现场照片待补充。',
+      image: '',
+      imageAlt: '观看协会成果，现场照片待补充',
     },
   ],
-  message:
-    '每一个值得探索的想法，都需要一份被看见的信任。\n愿我们因热爱相遇，以实践回应期待，\n让今天的微小灵感，成为明天的无限可能。',
+  message: '十分感谢对我们协会的支持。',
   contactLinks: [],
-  isPlaceholder: true,
+  isPlaceholder: false,
 }

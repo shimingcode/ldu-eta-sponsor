@@ -1,3 +1,4 @@
+import { site } from '../data/sponsor'
 import {
   ArrowUpRight,
   CalendarDays,
@@ -53,6 +54,9 @@ export function SponsorProfile({ sponsor }: { sponsor: Sponsor }) {
                 </span>
               )}
             </div>
+            {contacts.length === 0 && (
+              <p className="contact-notice">{site.contactNotice}</p>
+            )}
             {contacts.length > 0 && (
               <div className="contact-links" aria-label="经授权公开的联系方式">
                 {contacts.map((link, i) => (
