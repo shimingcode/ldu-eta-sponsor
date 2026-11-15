@@ -17,7 +17,15 @@ const particles = Array.from({ length: 30 }, (_, index) => ({
 }))
 
 export function IntroScreen({ onComplete }: IntroScreenProps) {
-  const { progress, secondsRemaining } = useIntroCountdown(onComplete)
+  const progressRef = useRef<HTMLSpanElement>(null)
+  const { secondsRemaining } = useIntroCountdown(onComplete, (value) => {
+    const bar = progressRef.current
+    if (!bar) return
+    bar.style.transform = `scaleX(${value})`
+    const percent = String(Math.round(value * 100))
+    if (bar.parentElement?.getAttribute('aria-valuenow') !== percent)
+      bar.parentElement?.setAttribute('aria-valuenow', percent)
+  })
   const reduceMotion = useReducedMotion()
   const screenRef = useRef<HTMLElement>(null)
 
@@ -135,9 +143,9 @@ export function IntroScreen({ onComplete }: IntroScreenProps) {
             aria-label="欢迎动画进度"
             aria-valuemin={0}
             aria-valuemax={100}
-            aria-valuenow={Math.round(progress * 100)}
+            aria-valuenow={0}
           >
-            <span style={{ transform: `scaleX(${progress})` }} />
+            <span ref={progressRef} style={{ transform: 'scaleX(0)' }} />
           </div>
           <p
             className="intro-countdown-status"

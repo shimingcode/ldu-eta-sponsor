@@ -23,6 +23,24 @@ function advance(milliseconds: number) {
 }
 
 describe('five-second intro deadline', () => {
+  it('streams smooth progress without rendering React on every frame', () => {
+    const onProgress = vi.fn()
+    const onComplete = vi.fn()
+    let renders = 0
+    function StreamingHarness() {
+      renders++
+      const { secondsRemaining } = useIntroCountdown(onComplete, onProgress)
+      return <output>{secondsRemaining}</output>
+    }
+    render(<StreamingHarness />)
+    for (let i = 0; i < 50; i++) advance(16)
+    expect(onProgress.mock.calls.length).toBeGreaterThan(40)
+    expect(renders).toBe(1)
+    advance(4200)
+    expect(onComplete).toHaveBeenCalledOnce()
+    expect(onProgress).toHaveBeenLastCalledWith(1)
+    expect(vi.getTimerCount()).toBe(0)
+  })
   it('pauses frame updates while hidden and resumes against the original deadline', () => {
     const visibility = vi
       .spyOn(document, 'visibilityState', 'get')

@@ -44,7 +44,7 @@ export interface Sponsor {
 }
 export const association = {
   name: '鲁东大学电子科技协会',
-  logo: 'images/association-logo-v2.png',
+  logo: 'images/association-logo-v2.webp',
   founded: '1985年3月5日',
   motto: '学以致用，真诚服务；科技创新，引领时代',
   introduction:

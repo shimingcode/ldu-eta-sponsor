@@ -3,7 +3,14 @@ import { useEffect, useRef, useState } from 'react'
 export const INTRO_DURATION_MS = 5_000
 
 /** A monotonic deadline keeps background-tab throttling from extending the intro. */
-export function useIntroCountdown(onComplete: () => void) {
+export function useIntroCountdown(
+  onComplete: () => void,
+  onProgress?: (value: number) => void,
+) {
+  const progressCallback = useRef(onProgress)
+  useEffect(() => {
+    progressCallback.current = onProgress
+  }, [onProgress])
   const callbackRef = useRef(onComplete)
   const startedAtRef = useRef<number | null>(null)
   const completedRef = useRef(false)
@@ -21,12 +28,19 @@ export function useIntroCountdown(onComplete: () => void) {
     let disposed = false
     let frameId = 0
     let timeoutId = 0
+    let previousSeconds = 5
 
     const update = () => {
       if (disposed || completedRef.current) return
       const remaining = Math.max(0, deadline - performance.now())
-      setProgress(1 - remaining / INTRO_DURATION_MS)
-      setSecondsRemaining(Math.ceil(remaining / 1_000))
+      const value = 1 - remaining / INTRO_DURATION_MS
+      if (progressCallback.current) progressCallback.current(value)
+      else setProgress(value)
+      const seconds = Math.ceil(remaining / 1_000)
+      if (seconds !== previousSeconds) {
+        previousSeconds = seconds
+        setSecondsRemaining(seconds)
+      }
       if (remaining === 0) {
         completedRef.current = true
         window.clearTimeout(timeoutId)

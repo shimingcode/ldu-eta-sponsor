@@ -31,6 +31,7 @@ export function LocalImage({
       alt={alt}
       className={className}
       loading={eager ? 'eager' : 'lazy'}
+      fetchPriority={eager ? 'high' : 'auto'}
       decoding="async"
       onError={() => setFailedPath(src)}
     />

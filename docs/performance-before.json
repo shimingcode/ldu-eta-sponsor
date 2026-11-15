@@ -1,0 +1,64 @@
+[
+  {
+    "long": [
+      196,
+      66,
+      186,
+      51,
+      114
+    ],
+    "cls": 0.0005586983046785897,
+    "lcp": 1368,
+    "home": 5688.100000008941,
+    "fps": 52.90127552904182,
+    "fcp": 652,
+    "metrics": {
+      "Nodes": 486,
+      "LayoutCount": 11,
+      "ScriptDuration": 1.282433,
+      "TaskDuration": 3.967808,
+      "JSHeapUsedSize": 4705336
+    }
+  },
+  {
+    "long": [
+      132,
+      73,
+      166,
+      97
+    ],
+    "cls": 0.0005586983046785897,
+    "lcp": 1236,
+    "home": 5564.5,
+    "fps": 54.4694274289973,
+    "fcp": 488,
+    "metrics": {
+      "Nodes": 486,
+      "LayoutCount": 11,
+      "ScriptDuration": 1.269304,
+      "TaskDuration": 3.863882,
+      "JSHeapUsedSize": 4728092
+    }
+  },
+  {
+    "long": [
+      130,
+      61,
+      148,
+      95,
+      301
+    ],
+    "cls": 0.0005586983046785897,
+    "lcp": 1196,
+    "home": 5500.20000000298,
+    "fps": 51.893774488490145,
+    "fcp": 464,
+    "metrics": {
+      "Nodes": 486,
+      "LayoutCount": 11,
+      "ScriptDuration": 1.229264,
+      "TaskDuration": 3.858301,
+      "JSHeapUsedSize": 4194408
+    }
+  }
+]
