@@ -44,7 +44,7 @@ export interface Sponsor {
 }
 export const association = {
   name: '鲁东大学电子科技协会',
-  logo: 'images/association-logo.svg',
+  logo: 'images/association-logo-v2.png',
   founded: '1985年3月5日',
   motto: '学以致用，真诚服务；科技创新，引领时代',
   introduction:
@@ -60,7 +60,7 @@ export const site = {
 export const sponsor: Sponsor = {
   name: '任逸轩',
   nickname: '热爱科学，喜欢自动铅',
-  avatar: 'images/ren-yixuan.png',
+  avatar: 'images/ren-yixuan-portrait-v2.jpg',
   cover: 'images/cover-placeholder.svg',
   title: '食品工程学院 · 电子科技协会有效赞助者',
   biography: ['来自食品工程学院，热爱科学，喜欢自动铅。'],

@@ -26,6 +26,7 @@ export default defineConfig({
             `content="${escape(site.description)}"`,
           )
           .replace('images/association-placeholder.svg', association.logo)
+          .replace('image/svg+xml', 'image/png')
           .replace(
             '</head>',
             `<link rel="canonical" href="${site.url}"/><meta property="og:type" content="website"/><meta property="og:title" content="${escape(site.title)}"/><meta property="og:description" content="${escape(site.description)}"/><meta property="og:url" content="${site.url}"/><meta property="og:image" content="${site.url}images/share-cover.png"/><meta name="twitter:card" content="summary_large_image"/></head>`,

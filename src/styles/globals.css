@@ -1203,7 +1203,7 @@
 
 .portrait-image {
   height: 430px;
-  object-position: center 30%;
+  object-position: center top;
 }
 .association-story {
   max-width: 760px;
