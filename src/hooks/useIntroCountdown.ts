@@ -54,10 +54,13 @@ export function useIntroCountdown(onComplete: () => void) {
     }
 
     const handleVisibilityChange = () => {
-      if (document.visibilityState === 'visible') update()
+      cancelAnimationFrame(frameId)
+      if (document.visibilityState === 'visible') animate()
     }
 
-    frameId = requestAnimationFrame(animate)
+    if (document.visibilityState === 'visible') {
+      frameId = requestAnimationFrame(animate)
+    }
     timeoutId = window.setTimeout(
       checkDeadline,
       Math.max(0, deadline - performance.now()),

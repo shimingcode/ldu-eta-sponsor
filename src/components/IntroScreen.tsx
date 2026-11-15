@@ -1,5 +1,5 @@
 import { association } from '../data/sponsor'
-import type { CSSProperties } from 'react'
+import { useEffect, useRef, type CSSProperties } from 'react'
 import { motion, useReducedMotion } from 'motion/react'
 import { Heart, Sparkles } from 'lucide-react'
 import { useIntroCountdown } from '../hooks/useIntroCountdown'
@@ -19,9 +19,25 @@ const particles = Array.from({ length: 30 }, (_, index) => ({
 export function IntroScreen({ onComplete }: IntroScreenProps) {
   const { progress, secondsRemaining } = useIntroCountdown(onComplete)
   const reduceMotion = useReducedMotion()
+  const screenRef = useRef<HTMLElement>(null)
+
+  useEffect(() => {
+    const screen = screenRef.current
+    const syncVisibility = () => {
+      screen?.classList.toggle(
+        'intro-paused',
+        document.visibilityState !== 'visible',
+      )
+    }
+    syncVisibility()
+    document.addEventListener('visibilitychange', syncVisibility)
+    return () =>
+      document.removeEventListener('visibilitychange', syncVisibility)
+  }, [])
 
   return (
     <motion.section
+      ref={screenRef}
       className="intro-screen"
       data-testid="intro-screen"
       aria-labelledby="intro-title"
@@ -103,7 +119,7 @@ export function IntroScreen({ onComplete }: IntroScreenProps) {
         </p>
         <p className="intro-welcome">
           <Heart size={16} aria-hidden="true" />{' '}
-          感谢您的支持，让探索与热爱继续闪光。
+          <span>感谢您对科技创新的支持</span>
         </p>
         <div className="intro-loading">
           <div className="intro-countdown-row">

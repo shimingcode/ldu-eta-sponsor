@@ -23,6 +23,26 @@ function advance(milliseconds: number) {
 }
 
 describe('five-second intro deadline', () => {
+  it('pauses frame updates while hidden and resumes against the original deadline', () => {
+    const visibility = vi
+      .spyOn(document, 'visibilityState', 'get')
+      .mockReturnValue('visible')
+    const onComplete = vi.fn()
+    render(<CountdownHarness onComplete={onComplete} />)
+    advance(1000)
+    visibility.mockReturnValue('hidden')
+    act(() => document.dispatchEvent(new Event('visibilitychange')))
+    const progress = screen.getByTestId('progress').textContent
+    expect(vi.getTimerCount()).toBe(1)
+    advance(2000)
+    expect(screen.getByTestId('progress').textContent).toBe(progress)
+    visibility.mockReturnValue('visible')
+    act(() => document.dispatchEvent(new Event('visibilitychange')))
+    expect(Number(screen.getByTestId('progress').textContent)).toBeCloseTo(0.6)
+    advance(2000)
+    expect(onComplete).toHaveBeenCalledOnce()
+    expect(vi.getTimerCount()).toBe(0)
+  })
   beforeEach(() => {
     // Fake performance together with timers so elapsed time is monotonic and deterministic.
     vi.useFakeTimers({
